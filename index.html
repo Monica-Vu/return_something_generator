@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Return Something! </title>
+</head>
+<body>
+  <center>
+  <h1> A Generator </h1>
+  <p> Insert Text Here </p>
+  <div ><b id='hello'> World</b></div>
+  <textarea id ="resturants" rows="10" cols="50">
+  </textarea>
+</br>
+  <button type ="button" onclick
+  ="myFunction()"> Submit </button>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+
+function myFunction() {
+
+var resturants = document.getElementById("resturants").value.split(",");
+
+  /*var resturants = document.getElementById('resturants').value.split(',');*/
+  var randomnum = Math.floor((Math.random() * resturants.length ) )
+  console.log(resturants + randomnum);
+  document.getElementById('hello').innerHTML = resturants[randomnum];
+
+}
+</script>
