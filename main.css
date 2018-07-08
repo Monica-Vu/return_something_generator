@@ -1,0 +1,24 @@
+.container {
+width: 80%;
+margin: 0 center;
+}
+
+body {
+  font-family: Gill Sans;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-family: Gill Sans;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+p {
+  padding: 5px;
+}
