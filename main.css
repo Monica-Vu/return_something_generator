@@ -1,10 +1,12 @@
 .container {
-width: 80%;
-margin: 0 center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 body {
-  font-family: Gill Sans;
+    font-family: "Lato", sans-serif;
 }
 
 .button {
@@ -21,4 +23,9 @@ body {
 
 p {
   padding: 5px;
+}
+
+textarea {
+  resize: none;
+  width: maximum;
 }
