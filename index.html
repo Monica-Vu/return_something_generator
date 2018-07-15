@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device width, intial-scale=1">
+  <title> Monica Vu </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+  <div class ="container">
+    <center>
+  <h1> Return Something </h1>
+  <p> This form returns one item from your list or randomizes your list (depending on which option you choose).
+    Not sure about the limit of items that can be entered or even the number of characteristics but let me know if that changes
+  </p>
+<textarea id ="resturants" rows="10" cols="50"></textarea>
+<br>
+<button type ="button" class="button" onclick ="pickOne()"> Pick one! </button>
+<button type ="button" class="button" onclick ="randomize()"> Randomize!</button>
+<button type ="button" class="button" onclick="document.getElementById('resturants').value = ''"> Clear</button>
+<br />
+<br />
+<b id='returnedText'> </b></div>
+</center>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+function myFunction() {
+var resturants = document.getElementById("resturants").value.trim();
+var resturants = document.getElementById("resturants").value.split(",");
+
+  /*var resturants = document.getElementById('resturants').value.split(',');*/
+  var randomnum = Math.floor((Math.random() * resturants.length ) )
+  console.log(resturants + randomnum);
+  document.getElementById('returnedText').innerHTML = resturants[randomnum];
+}
+
+function randomize() {
+  var resturants = document.getElementById("resturants").value.trim();
+  var resturants = document.getElementById("resturants").value.split(",");
+
+  resturants.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById('returnedText').innerHTML = resturants;
+}
+</script>
